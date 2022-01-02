@@ -17,5 +17,7 @@ class ShopModule implements IModule
 //        Route::get("$base_url/category/{category:url}", [ShopController::class, 'category'])->name('shop.category');
         Route::get("$base_url/category/{category}", [ShopController::class, 'category'])->name('shop.category');
         Route::get("$base_url/product/{product}", [ShopController::class, 'product'])->name('shop.product');
+        // можно не указывать scopeBindings() если используется измененный ключ, например, product:url
+        Route::get("$base_url/nested/{category}/{product}", [ShopController::class, 'nested'])->name('shop.nested')->scopeBindings();
     }
 }

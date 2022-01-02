@@ -4,6 +4,6 @@
     <h1>Привет, {{ $category->name }}!</h1>
     {{ route('shop.index')  }}
     <br>
-    {{ route('shop.category', ['category' => 'kjk']) }}
+    {{ route('shop.category', $category) }}
 @endsection
 
