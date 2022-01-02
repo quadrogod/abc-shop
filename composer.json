@@ -1,0 +1,31 @@
+{
+  "name": "quadrogod/abc-shop",
+  "description": "Abc Shop",
+  "minimum-stability": "stable",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "quadrogod",
+      "email": "quadrogod@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Quadrogod\\Abc\\Shop\\": "src/",
+      "Quadrogod\\Abc\\Shop\\Database\\Seeders\\": "database/seeders/",
+      "Quadrogod\\Abc\\Shop\\Database\\Factories\\": "database/factories/"
+    }
+  },
+  "require": {
+    "quadrogod/abc-core": "*",
+    "quadrogod/abc-pages": "*"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Quadrogod\\Abc\\Shop\\ServiceProvider"
+      ]
+    }
+  }
+}
